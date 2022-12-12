@@ -5,7 +5,7 @@
     export let userid: Number;
 
 </script>
-<nav class="navbar p-2 pr-5">    
+<nav class="is-fixed-top navbar p-2 pr-5">    
     <div class="navbar-brand">
         <a href="/" class="navbar-item">
             <img src={logo} alt="logo" width={128}>
@@ -34,24 +34,26 @@
 
 
 <style lang="scss">
+    // .navbar-end {
+    //     gap: 5px;
+    // }
     .navbar-end {
-        gap: 5px;
-    }
-    .navbar-end a::after {
-        transition: width .4s;
-    }
-    .navbar-end a:hover::after {
-        width: 80%;
-    }
-    .navbar-end a::after {
-        content: "";
-        position: absolute;
-        height: 1.8px;
-        width: 0%;
-        left: 50%;
-        background-color: black;
-        bottom: 15%;
-        
-        
+        a:hover::after {
+            width: 100%;
+        }
+            a::after {
+            box-sizing: content-box;
+            content: "";
+            position: absolute;
+            height: 1.6px;
+            width: 0%;
+            background-color: black;
+            transition: width .5s;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform-origin: center;
+        }
     }
 </style>
