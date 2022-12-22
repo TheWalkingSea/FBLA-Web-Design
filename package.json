@@ -18,16 +18,31 @@
     "@types/cookie": "^0.5.1",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
+    "bulma": "^0.9.4",
     "eslint": "^8.28.0",
     "eslint-plugin-svelte3": "^4.0.0",
-    "svelte": "^3.54.0",
-    "svelte-check": "^2.9.2",
-    "tslib": "^2.4.1",
-    "typescript": "^4.9.3",
-    "vite": "^4.0.0",
     "sass": "^1.53.0",
+    "svelte": "^3.55.0",
+    "svelte-check": "^2.9.2",
     "svelte-preprocess": "^4.10.7",
-    "bulma": "^0.9.4"
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.2"
   },
-  "type": "module"
+  "type": "module",
+  "description": "Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).",
+  "main": "svelte.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheWalkingSea/FBLA-Web-Design.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheWalkingSea/FBLA-Web-Design/issues"
+  },
+  "homepage": "https://github.com/TheWalkingSea/FBLA-Web-Design#readme",
+  "dependencies": {
+    "svelte-add": "^2022.12.0-9.0"
+  }
 }

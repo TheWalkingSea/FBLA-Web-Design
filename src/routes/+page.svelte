@@ -1,35 +1,40 @@
 <script type="ts">
     import { onMount } from 'svelte';
     import Navbar from './navbar.svelte';
+    import Finder from './findFlight.svelte';
     let search: HTMLElement;
     function submit(event: Event) {
         event.preventDefault()
         console.log(event)
     }
 </script>
-<Navbar userid={0}/>
-
-
-<div class="is-flex is-flex-direction-column">
-    <div class="is-flex-grow-2 content is-justify-content-center">
-        <p>Travel Faster than a<br>Jet.</p>
-        <p>Travel in a Rocket.</p>
-    </div>
-    <form class="is-flex-grow-1" on:submit>
-        <div class="field is-grouped is-spaced-evenly is-justify-content-center">
-            <div class="control">
-                <input name="destination" type="text" class="input" placeholder="Destination">
-            </div>
-            <div class="control">
-                <input name="depart" type="text" class="input" placeholder="Departure">
-            </div>
-            <div class="control">
-                <input name="date" type="text" class="input" placeholder="Date">
-            </div>
-            <button class="button" type="submit">lorem</button>
-        </div>
-    </form>
-</div>
-<style>
+<section class="is-fullheight is-flex is-flex-direction-column">
     
+
+    <Navbar userid={0}/>
+
+
+    <div class="is-flex is-flex-direction-column is-flex-grow-1">
+        <div class="is-flex-grow-2 content is-justify-content-center" id="JetRocketHook">
+            <p>Travel Faster than a<br><strong>Jet.</strong></p>
+            <p>Travel in a <strong>Rocket.</strong></p>
+        </div>
+        <div class="is-flex-grow-1 field is-align-self-center"><Finder/></div>
+        
+    </div>
+
+</section>
+
+<style type="scss">
+    .is-fullheight {
+        height: 100vh;
+    }
+    p {
+        font-size: 2em;
+    }
+    #JetRocketHook {
+        padding-left: 4.5em;
+        padding-top: 5em;
+    }
 </style>
+

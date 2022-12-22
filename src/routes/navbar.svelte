@@ -1,11 +1,10 @@
 <script type="ts">
     import logo from './lib/images/logo.png';
     import User from './user.svelte'
-    const h: string = "64";
     export let userid: Number;
 
 </script>
-<nav class="is-fixed-top navbar p-2 pr-5">    
+<nav class="navbar p-2 pr-5">    
     <div class="navbar-brand">
         <a href="/" class="navbar-item">
             <img src={logo} alt="logo" width={128}>
@@ -34,14 +33,11 @@
 
 
 <style lang="scss">
-    // .navbar-end {
-    //     gap: 5px;
-    // }
     .navbar-end {
         a:hover::after {
             width: 100%;
         }
-            a::after {
+        a::after {
             box-sizing: content-box;
             content: "";
             position: absolute;
