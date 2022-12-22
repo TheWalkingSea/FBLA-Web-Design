@@ -1,34 +1,29 @@
 <script lang="ts">
     export let name: String;
-    let drop: Element;
+    $: active = false;
 </script>
 
-<button class="button" type="button" on:click={() => drop.classList.toggle("active")}>{name}</button>
-<div class="expandedDrop" bind:this={drop}>
-    <slot/>
+<div class="parent">
+    <button class:active type="button" on:mousedown={() => active = !active}>
+        <div class="icon-text">
+            <span class="icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </span>
+            <span class="name">{name}</span>
+            <span class="icon right">
+                <i class="fa-solid fa-caret-down"></i>
+            </span>
+        </div>
+    </button>
+    <div class="expandedDrop" class:active>
+        <slot/>
+    </div>
 </div>
 
-
 <style lang="scss">
-    .active {
-        visibility: visible;
-    }
-    .expandedDrop {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5px;
-        background-color: white;
-        padding: 1em;
-        visibility: hidden;
-    }
-    .expandedDrop :global(*) {
-        color: rgb(60, 77, 162);
-        background-color: white;
-        border: none;
-        transition: color, .5s;
+    $dropdown: rgb(86, 86, 86);
+    $buttontext: white;
+    button {
         font-size: 1.2em;
-    }
-    .expandedDrop :global(*):hover {
-        color: black;
     }
 </style>
