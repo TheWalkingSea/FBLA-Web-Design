@@ -5,7 +5,7 @@
     export let userid: Number;
 
 </script>
-<nav class="is-fixed-top navbar p-2 pr-5">    
+<nav class="navbar p-2 pr-5">    
     <div class="navbar-brand">
         <a href="/" class="navbar-item">
             <img src={logo} alt="logo" width={128}>
